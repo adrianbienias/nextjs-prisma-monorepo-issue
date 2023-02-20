@@ -1,0 +1,12 @@
+{
+  "name": "nextjs-prisma-monorepo-issue",
+  "private": true,
+  "workspaces": [
+    "package-1-with-prisma",
+    "package-2-with-prisma",
+    "nextjs-app"
+  ],
+  "scripts": {
+    "start": "(npm run build -w package-1-with-prisma) && (npm run build -w package-2-with-prisma) && (npm run dev -w nextjs-app)"
+  }
+}

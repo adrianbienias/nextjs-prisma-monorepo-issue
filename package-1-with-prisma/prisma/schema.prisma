@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model DummyTableOne {
+  id String @id @default(uuid())
+}
